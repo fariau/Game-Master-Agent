@@ -33,7 +33,7 @@ item_agent = Agent(
 
 def main():
     print("Welcome to Fantasy Game!")
-    choice = input("Do you enter the forest or turn back? -> ")
+    choice = input("Do you enter the forest / Explore the river / Climb the mountain or turn back? -> ")
     
     result1 = Runner.run_sync(narrator_agent, choice, run_config=config)
     print("Narrator:", result1.final_output)
