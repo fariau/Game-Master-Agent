@@ -32,17 +32,18 @@ item_agent = Agent(
 )
 
 def main():
-    print("Welcome to Fantasy Game!")
-    choice = input("Do you enter the forest / Explore the river / Climb the mountain or turn back? -> ")
+    print("\n🧙‍♂️  Welcome to Fantasy Game!  🐉✨\n")
     
+    choice = input("🗺️  Do you enter the forest / explore the river / climb the mountain / or turn back? -> ")
+
     result1 = Runner.run_sync(narrator_agent, choice, run_config=config)
-    print("Narrator:", result1.final_output)
-    
+    print("\n📖  Narrator: ", result1.final_output)
+
     result2 = Runner.run_sync(monster_agent, "Start encounter", run_config=config)
-    print("Encounter:", result2.final_output)
-    
+    print("\n⚔️  Encounter: ", result2.final_output)
+
     result3 = Runner.run_sync(item_agent, "Give reward", run_config=config)
-    print("Reward:", result3.final_output)
-    
+    print("\n🎁  Reward: ", result3.final_output)
+
 if __name__ == "__main__":
     main()
